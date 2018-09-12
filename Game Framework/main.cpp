@@ -7,9 +7,9 @@ int main(int argc, char* args[])
 {
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
 	{
-		g_pWindow = SDL_CreateWindow("PP01.HelloSDL",
+		g_pWindow = SDL_CreateWindow("Game Framework",
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-			640, 480, SDL_WINDOW_SHOWN);
+			1024, 768, SDL_WINDOW_SHOWN);
 
 		if (g_pWindow != 0)
 		{
@@ -22,7 +22,7 @@ int main(int argc, char* args[])
 		return 1;
 	}
 
-	SDL_SetRenderDrawColor(g_pRenderer, 0, 0, 0, 255);
+	SDL_SetRenderDrawColor(g_pRenderer, 0, 255, 0, 255);
 	SDL_RenderClear(g_pRenderer);
 	SDL_RenderPresent(g_pRenderer);
 	SDL_Delay(5000);
